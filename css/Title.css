@@ -1,0 +1,29 @@
+html { 
+  font-size: 26px;
+}
+
+.Wellcome{
+    display: none;
+}
+  
+.typing {
+    width: 100vw;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    display: block;
+    right: 0;
+    left: 0;
+    animation-name: cursor; 
+    animation-duration: 0.3s; 
+    animation-iteration-count: infinite; 
+    text-align: center;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 2em;
+}
+
+@keyframes cursor{ 
+    0%{border-right: 1px solid #fff} 
+    50%{border-right: 1px solid #000} 
+    100%{border-right: 1px solid #fff} 
+}
