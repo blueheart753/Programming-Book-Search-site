@@ -11,7 +11,7 @@ $.ajax({
   .done(function (msg) {
     console.log(msg);
     for (var i = 0; i < 10; i++) {
-      $('.book').append("<a href='" + msg.documents[i].url + "' targer = _blank>" + "<img src ='" + msg.documents[i].thumbnail + "'/>")
+      $('.Book').append("<a href='" + msg.documents[i].url + "' targer = _blank>" + "<img src ='" + msg.documents[i].thumbnail + "'/>")
       console.log(ran);
 
     }
@@ -20,7 +20,7 @@ $.ajax({
     console.log(msg);
     for (var i = 0; i < 3; i++) {
       let random = Math.floor(Math.random() * 10);
-      $('.book').append("<a href='" + msg.documents[i].url + "<img src ='" + msg.documents[i].thumbnail + "'/>")
+      $('.Book').append("<a href='" + msg.documents[i].url + "<img src ='" + msg.documents[i].thumbnail + "'/>")
     }
   });
 

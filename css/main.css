@@ -78,16 +78,15 @@ li {
 }
 
 .bookBox {
-    box-sizing: border-box;
-    padding: 6%;
-    width: 50%;
+    width: 60%;
+    height: 80%;
     margin: 0 auto;
     position: absolute;
-    top: 10%;
+    top: 4%;
     left: 0;
     right: 0;
     border-radius: 12px;
-    background: #fff;
+    background: whitesmoke;
 }
 
 .close {
@@ -98,7 +97,6 @@ li {
     background: #4bd190;
     border-radius: 12px;
     position: absolute;
-    right: 0;
     top: 10px;
     right: 20px;
 }
@@ -109,29 +107,26 @@ li {
 
 .choose {
     position: relative;
-    top: -80px;
+    top: 20px;
     text-align: center;
 }
 
-.book {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.Book {
+    margin: 0 auto;
+    width: 80%;
+    position: relative;
+    top: 10%;
 }
 
-.book a {
-    margin-left: 20px;
-}
-
-.book img {
-    width: 100%;
+.Book img {
+    display: inline-block;
+    width: 20%;
     position: relative;
     left: 10px;
     transition: .2s;
 }
 
-.book img:hover {
+.Book img:hover {
     transform: scale(1.1);
 }
 
