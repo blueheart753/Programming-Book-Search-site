@@ -10,10 +10,7 @@ ul,
 li {
     list-style: none;
 }
-.first {
-    width: 1200px;
-    margin: 0 auto;
-}
+
 .maincontainer {
     margin: 0 auto;
     width: 1200px;
