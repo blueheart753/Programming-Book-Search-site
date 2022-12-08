@@ -19,10 +19,9 @@ li {
     margin: 0 auto;
     width: 1200px;
     height: 100vh;
-    /* display: none; */
-    /* opacity: 0; */
+    display: none;
+    opacity: 0;
     position: relative;
-    overflow: hidden;
 }
 .header {
     height: 60px;
@@ -135,51 +134,33 @@ li {
 .searchResult {
     width: 1200px;
     margin: 0 auto;
-    display: none;
 }
 
-.searchResult > .searchBar {
-    width: 25%;
-}
-
-.select {
-    box-sizing: border-box;
-    padding: 20px;
-    width: 700px;
-    height: 300px;
+.result {
+    display: flex;
+    flex-wrap: wrap;
     position: relative;
-    top: 20%;
-    margin: 0 auto;
-    border: 1px solid #121212;
+    top: 100px;
+}
+
+.result div, .result div img {
+    font-size: 22px;
+    margin: 20px;
+}
+
+.result div {
+    width: 300px;
+    border: 2px solid #000;
     border-radius: 12px;
+    transition: .2s;
 }
 
-.SelectBTN {
-    box-sizing: border-box;
-    width: 20%;
-    padding: 10px;
-    border: 0px;
-    margin: 10px;
-    border-radius: 12px;
-    background: #923bbb54;
-    color: #000;
+.result div a {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
-.SelectBTN:hover {
-    background: #923bbb6e;
-}
-
-.SelectBTN:active {
-    background: #923bbba8;
-}
-
-#search_Icon {
-    width: 6%;
-    position: relative;
-    left: 8%;
-    top: 10%;
-}
-
-#search_Icon:hover {
-    cursor: pointer;
+.result div:hover {
+    transform: scale(1.1);
 }

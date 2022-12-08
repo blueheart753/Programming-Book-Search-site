@@ -1,83 +1,6 @@
 $(document).ready(function () {
-  $('#java').click(function(){
-    $('#java').css('background','#923bbbc7')
-    .css('color','white')
-    console.log(true)
-  })
-  $('#js').click(function(){
-    $('#js').css('background','#923bbbc7')
-    .css('color','white')
-    console.log(true)
-  })
-  $('#ts').click(function(){
-    $('#ts').css('background','#923bbbc7')
-    .css('color','white')
-    console.log(true)
-  })
-  $('#jsp').click(function(){
-    $('#jsp').css('background','#923bbbc7')
-    .css('color','white')
-    console.log(true)
-  })
-  $('#php').click(function(){
-    $('#php').css('background','#923bbbc7')
-    .css('color','white')
-    console.log(true)
-  })
-  $('#python').click(function(){
-    $('#python').css('background','#923bbbc7')
-    .css('color','white')
-    console.log(true)
-  })
-  $('#C').click(function(){
-    $('#C').css('background','#923bbbc7')
-    .css('color','white')
-    console.log(true)
-  })
-  $('#CP').click(function(){
-    $('#CP').css('background','#923bbbc7')
-    .css('color','white')
-    console.log(true)
-  })
-  $('#CS').click(function(){
-    $('#CS').css('background','#923bbbc7')
-    .css('color','white')
-    console.log(true)
-  })
-  $('#Unity').click(function(){
-    $('#Unity').css('background','#923bbbc7')
-    .css('color','white')
-    console.log(true)
-  })
-  $('#Ruby').click(function(){
-    $('#Ruby').css('background','#923bbbc7')
-    .css('color','white')
-    console.log(true)
-  })
-  $('#Swift').click(function(){
-    $('#Swift').css('background','#923bbbc7')
-    .css('color','white')
-    console.log(true)
-  })
-  $('#DB').click(function(){
-    $('#DB').css('background','#923bbbc7')
-    .css('color','white')
-    console.log(true)
-  })
-  $('#Unreal').click(function(){
-    $('#Unreal').css('background','#923bbbc7')
-    .css('color','white')
-    console.log(true)
-  })
-  $('#html').click(function(){
-    $('#html').css('background','#923bbbc7')
-    .css('color','white')
-    console.log(true)
-  })
-
   $('.search').keydown(function (key) {
     if (key.keyCode == 13) {
-      $('.maincontainer').css('display', 'none')
       $('.searchResult').css('display', 'block')
       var pageNum = 1;
       $.ajax({
@@ -89,8 +12,7 @@ $(document).ready(function () {
         .done(function (msg) {
           console.log(msg);
           for (var i = 0; i < 10; i++) {
-            $(".result").append("<p><a href='" + msg.documents[i].url + "'>" + msg.documents[i].title + "</a></p>");
-            $(".result").append("<a href='" + msg.documents[i].url + "'>" + "<img src='" + msg.documents[i].thumbnail + "'/><br>");
+            $(".result").append("<div><p><a href='" + msg.documents[i].url + "'>" + msg.documents[i].title + "</a>"+"<a href='" + msg.documents[i].url + "'>" + "<img src='" + msg.documents[i].thumbnail + "'/><br></p></div>");
           }
         });
       $(window).scroll(function () {
@@ -105,9 +27,8 @@ $(document).ready(function () {
             .done(function (msg) {
               console.log(msg);
               for (var i = 0; i < 10; i++) {
-                $(".result").append("<p><a href='" + msg.documents[i].url + "'>" + msg.documents[i].title + "</a></p>");
-                $(".result").append("<a href='" + msg.documents[i].url + "'>" + "<img src='" + msg.documents[i].thumbnail + "'/><br>");
-              }
+                $(".result").append("<div><p><a href='" + msg.documents[i].url + "'>" + msg.documents[i].title + "</a>"+"<a href='" + msg.documents[i].url + "'>" + "<img src='" + msg.documents[i].thumbnail + "'/><br></p></div>");
+              } 
             });
         }
       });
