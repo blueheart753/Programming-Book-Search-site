@@ -172,3 +172,14 @@ li {
 .SelectBTN:active {
     background: #923bbba8;
 }
+
+#search_Icon {
+    width: 6%;
+    position: relative;
+    left: 8%;
+    top: 10%;
+}
+
+#search_Icon:hover {
+    cursor: pointer;
+}
