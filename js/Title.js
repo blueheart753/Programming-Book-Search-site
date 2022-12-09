@@ -36,17 +36,21 @@ setTimeout(() =>
   $(".first").css('display', 'none')
   , 6200);
 
-setTimeout(() => 
-$(".maincontainer")
-.css('display','block')
-.css('transition','1.5s')
-.css('opacity','1')
-,6700)
+setTimeout(() =>
+  $(".typing").css('display', 'none')
+  , 6300)
+
+setTimeout(() =>
+  $(".maincontainer")
+    .css('display', 'block')
+    .css('transition', '1.5s')
+    .css('opacity', '1')
+  , 6700)
 
 
 setTimeout(() =>
   $(".Bookpop")
     .css('display', 'block')
     .css('opacity', '1')
-  , 7100)
+  , 7000)
 
