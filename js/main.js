@@ -1,4 +1,47 @@
 $(document).ready(function () {
+
+  let Notsikp = 
+    setTimeout(() =>
+      $(".typing")
+        .css('transition', '1.5s')
+        .css('font-size', '60px')
+        .css('opacity', '0')
+      , 5500)
+
+    setTimeout(() =>
+      $(".first").css('display', 'none')
+      , 6200)
+    setTimeout(() =>
+      $(".maincontainer")
+        .css('display', 'block')
+        .css('transition', '1.5s')
+        .css('opacity', '1')
+      , 6500)
+    setTimeout(() =>
+      $(".Bookpop")
+        .css('display', 'block')
+        .css('opacity', '1')
+      , 6700)
+      
+  var skip = false;
+  $('.btnSkip').click(function () {
+    skip = true;
+    console.log(skip);
+    $(".first").css('display', 'none')
+    $(".maincontainer")
+      .css('display', 'block')
+      .css('transition', '1.5s')
+      .css('opacity', '1')
+    $(".Bookpop")
+      .css('display', 'block')
+      .css('opacity', '1')
+  })
+
+  if (skip == false) {
+    clearTimeout(Notsikp);
+  }
+
+
   $('.search').keydown(function (key) {
     if (key.keyCode == 13) {
       $('.searchResult').css('display', 'block')
@@ -12,7 +55,7 @@ $(document).ready(function () {
         .done(function (msg) {
           console.log(msg);
           for (var i = 0; i < 10; i++) {
-            $(".result").append("<div><p><a href='" + msg.documents[i].url + "'>" + msg.documents[i].title + "</a>"+"<a href='" + msg.documents[i].url + "'>" + "<img src='" + msg.documents[i].thumbnail + "'/><br></p></div>");
+            $(".result").append("<div><p><a href='" + msg.documents[i].url + "'>" + msg.documents[i].title + "</a>" + "<a href='" + msg.documents[i].url + "'>" + "<img src='" + msg.documents[i].thumbnail + "'/><br></p></div>");
           }
         });
       $(window).scroll(function () {
@@ -27,8 +70,8 @@ $(document).ready(function () {
             .done(function (msg) {
               console.log(msg);
               for (var i = 0; i < 10; i++) {
-                $(".result").append("<div><p><a href='" + msg.documents[i].url + "'>" + msg.documents[i].title + "</a>"+"<a href='" + msg.documents[i].url + "'>" + "<img src='" + msg.documents[i].thumbnail + "'/><br></p></div>");
-              } 
+                $(".result").append("<div><p><a href='" + msg.documents[i].url + "'>" + msg.documents[i].title + "</a>" + "<a href='" + msg.documents[i].url + "'>" + "<img src='" + msg.documents[i].thumbnail + "'/><br></p></div>");
+              }
             });
         }
       });

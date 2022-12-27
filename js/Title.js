@@ -24,33 +24,4 @@ function typing() {
   }
 }
 
-setTimeout(() =>
-  $(".typing")
-    .css('transition', '1.5s')
-    .css('font-size', '60px')
-    .css('opacity', '0')
-  , 5500);
-
-
-setTimeout(() =>
-  $(".first").css('display', 'none')
-  , 6200);
-
-setTimeout(() =>
-  $(".typing").css('display', 'none')
-  , 6300)
-
-setTimeout(() =>
-  $(".maincontainer")
-    .css('display', 'block')
-    .css('transition', '1.5s')
-    .css('opacity', '1')
-  , 6700)
-
-
-setTimeout(() =>
-  $(".Bookpop")
-    .css('display', 'block')
-    .css('opacity', '1')
-  , 7000)
 
