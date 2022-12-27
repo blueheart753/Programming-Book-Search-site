@@ -1,13 +1,13 @@
 html { 
     font-size: 26px;
-  }
+}
   
-  .Wellcome{
-      display: none;
-  }
+.Wellcome{
+  display: none;
+}
     
-  .typing {
-      position: absolute;
+.typing {
+    position: absolute;
       left: 0;
       top: 30%;
       display: block;
@@ -18,10 +18,28 @@ html {
       text-align: center;
       font-family: 'Abril Fatface', cursive;
       font-size: 2em;
-  }
+}
   
   @keyframes cursor{ 
       0%{border-right: 1px solid #fff} 
       50%{border-right: 1px solid #000} 
       100%{border-right: 1px solid #fff} 
-  }
+}
+
+.btnSkip {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 20px;
+    position: relative;
+    left: 93%;
+    top: 10px;
+    border: 0px;
+    background: inherit;
+    transition: .2s;
+}
+
+.btnSkip:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    border-bottom: 1px solid #000;
+}
